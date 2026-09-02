@@ -26,8 +26,7 @@ using var app = builder.Build();
 app.UseExceptionHandler();
 
 app.MapDefaultEndpoints();
-app.UseFastEndpoints(
-    c =>
+app.UseFastEndpoints(static c =>
     {
       c.Serializer.Options.AddSerializerContextsFromBunko_Club_Server();
       c.Binding.ReflectionCache.AddFromBunkoClubServer();
