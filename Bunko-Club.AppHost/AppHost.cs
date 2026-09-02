@@ -2,7 +2,12 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var server = builder.AddProject<Projects.Bunko_Club_Server>("server")
     .WithHttpHealthCheck("/health")
-    .WithExternalHttpEndpoints();
+    .WithExternalHttpEndpoints()
+    .WithUrlForEndpoint("https", static url =>
+    {
+      url.DisplayText = "Scalar (HTTPS)";
+      url.Url = "/scalar";
+    });
 
 var frontend = builder.AddJavaScriptApp("frontend", "../Bunko-Club.Frontend", runScriptName: "start")
     .WithNpm(installCommand: "ci")
