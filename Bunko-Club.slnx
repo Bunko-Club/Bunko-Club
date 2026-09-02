@@ -1,7 +1,4 @@
 <Solution>
   <Project Path="Bunko-Club.AppHost/Bunko-Club.AppHost.csproj" />
   <Project Path="Bunko-Club.Server/Bunko-Club.Server.csproj" />
-  <!-- <Project Path="frontend/frontend.esproj">
-    <Build />
-  </Project> -->
 </Solution>
